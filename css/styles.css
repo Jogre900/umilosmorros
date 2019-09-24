@@ -59,6 +59,11 @@
     height: 250px;
    border-top-left-radius: 2px;
    border-top-right-radius: 2px;
+   background: linear-gradient(to bottom, #95e3fc 5%, white 30% );
+    -moz-background: linear-gradient(to bottom, #95e3fc 5%, white 30% );
+    -webkit-background: linear-gradient(to bottom, #95e3fc 5%, white 30% );
+    -o-background: linear-gradient(to bottom, #95e3fc 5%, white 30% );
+    -ms-background: linear-gradient(to bottom, #95e3fc 5%, white 30% );
    box-shadow: 3px 0px 8px #555565; 
 }
 .header-img{
