@@ -30,27 +30,37 @@
 .redes{
     position: fixed;
     z-index: 9999 !important;
-    width: 50px;
-    height: 100px;
-    transition: all 0.5s;
+    width: 200px;
+    height: 150px;
 }
-.redes:hover{
-    width: 0px;
+.facebook, 
+.twitter,
+.insta{
+    color: #fff;
+    display: flex;
+    align-items: center;
+    width: 19%;
+    height: 33%; 
+    line-height: 50px; 
 }
+.redes div span{
+    margin: auto .5em;
+}
+.facebook:hover, 
+.twitter:hover,
+.insta:hover{
+    transition: width 0.5s;
+    width: 70%;  
+}
+
 .facebook{
     background-color: #4267B2;
-    width: 100%;
-    height: 33%;
 }
 .twitter{
     background-color: #55acee;
-    width: 100%;
-    height: 33%;
 }
 .insta{
     background-color: #111;
-    width: 100%;
-    height: 33%;
 }
 /* ----HEADER---- */
 .header{
@@ -104,6 +114,10 @@
 
 .nav-bar{
     background: linear-gradient(to top, var(--mainColor),#00b822);
+        -webkit-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -moz-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -o-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -ms-background: linear-gradient(to top, var(--mainColor),#00b822);
 }
 
 .nav-bar ul{
@@ -123,7 +137,11 @@
     color: #fff;
     background: rgba(0, 153, 28, .5);
 }
-
+.fixed-nav nav{
+    position: fixed;
+    top: 0;
+    z-index: 1 !important;  
+}
 /* FIN ESTILOS MENU */
 /* ---ESTILOS SLIDER--- */
 .slider{
@@ -173,10 +191,15 @@
     text-align: center;
     border: 1px solid #555565;
     border-radius: 3px;
-    /* padding: .5em; */
+    background: #fff;
+    box-shadow: 2px 2px 2px #555565;
 }
 .articulo h1{
-    background: var(--mainColor);
+    background: linear-gradient(to top, var(--mainColor),#00b822);
+        -webkit-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -moz-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -o-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -ms-background: linear-gradient(to top, var(--mainColor),#00b822);
     color: var(--thirdColor);
     border-bottom: 1px solid #555565;
     padding: .8em;
@@ -194,7 +217,8 @@
     display: block;
     width: 50%;
     padding: .5em;
-    border: 1px solid var(--secundColor);
+    background: var(--secundColor);
+    color: var(--thirdColor);
     margin: auto;
     margin-bottom: .5em;
     font-size: 14px;
@@ -215,7 +239,7 @@
 .content-shape-1{
     width: calc(50% - 50px);
     height: 100%;
-    background: red;
+    background: var(--secundColor);
     box-sizing: border-box;
     
 }
@@ -224,7 +248,7 @@
     height: 100%;
     background: blue;
     box-sizing: border-box;
-    border-left: 100px solid red;
+    border-left: 100px solid var(--secundColor);
     border-bottom: 350px solid transparent;
     background-image: url('../img/info-1.jpg');
     background-position: -10em -5em;
@@ -236,15 +260,32 @@
     display: block;
     width: 100%;   
     height: 100%;
-    background-color: rgba(0,0,0, .5);
+    background-color: rgba(0,0,0, .4);
 }
-.content-cover article{
+.content-cover-list{
+    background-color: rgba(237, 237, 237, .5);
+    color: white;
+    width: 50%;
+    text-align: center;
+    padding: 1.5em;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 5%;
-    color: #fff;
+    left: 10%;
+    border-radius: 5px;
 }
+.content-cover-list article{
+    display: flex;
+    justify-content: center;
+    line-height: 50%;
+    padding: .5em;
+    font-size: 1.5em;
+}
+.content-cover-list span{
+    padding: 0em .5em .5em;
+    color: var(--mainColor);
+}
+
 /* ESTILOS CONTACTO */
 .contacto{
     position: relative;
@@ -289,7 +330,11 @@
     border-top: .4em solid var(--secundColor);
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
-    background-color: var(--mainColor);
+    background: linear-gradient(to top, var(--mainColor),#00b822);
+        -webkit-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -moz-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -o-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -ms-background: linear-gradient(to top, var(--mainColor),#00b822);
     color: var(--thirdColor);
     grid-area: titulo-aps;
 }
@@ -326,7 +371,11 @@
 }
 .footer-top{
     height: 200px;
-    background: var(--mainColor);
+    background: linear-gradient(to top, var(--mainColor),#00b822);
+        -webkit-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -moz-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -o-background: linear-gradient(to top, var(--mainColor),#00b822);
+        -ms-background: linear-gradient(to top, var(--mainColor),#00b822);
     border-top: .4em solid var(--secundColor);
     border-top-left-radius: 2px;
     border-top-right-radius: 2px;
@@ -377,6 +426,7 @@
 .social-networks span:hover,
 .social-networks span:active{
     cursor: pointer;
+    color: var(--mainColor);
 }
 .copyright{
     background-color: rgba(0,0,0, .7);
